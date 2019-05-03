@@ -73,30 +73,7 @@ public class PizzeriaAdminConsoleApp {
 		return pizzasTemp;
 	}
 	
-	public void ajoutBisPizza(Scanner scan, Pizza[] lesPizzas) {
-		// Déclarations des variables locales
-		String code;
-		String nom;
-		double prix;
-		System.out.println("AJOUTER UNE NOUVELLE PIZZA");
-		System.out.println("Veuillez saisir le code : ");
-		code = scan.next();
-		System.out.println("Veuillez saisir le nom (sans Espace)");
-		nom = scan.next();
-		System.out.println("Veuillez saisir son prix (€)");
-		prix = scan.nextDouble();
-
-		// Instanciation de la nouvelle Pizza
-		Pizza newPizza = new Pizza(code,nom,prix);
-
-		// Ajout dans un nouveau tableau
-		Pizza[] pizzasTemp = new Pizza[lesPizzas.length+1];
-		for(int i = 0; i<lesPizzas.length;i++) {
-			pizzasTemp[i] = lesPizzas[i];
-		}
-		pizzasTemp[lesPizzas.length] = newPizza;
-		lesPizzas = pizzasTemp;
-	}
+	
 	
 	/**
 	 * Permet de rechercher une pizza dans le tableau en fonction de son code
